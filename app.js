@@ -6,6 +6,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 app.get("/",(req,res)=>{
         res.sendFile(__dirname+"/index.html")
+        console.log(__dirname)
 })
 
 app.post("/",(req,res)=>{
@@ -14,6 +15,7 @@ app.post("/",(req,res)=>{
         res.sendFile(__dirname+'/views/main.html')
        }
 })
+
 
 app.post("/love",function(req,res){
         res.send("Thank you")
